@@ -1,6 +1,15 @@
 
+  <div class='col-12 row d-flex '>
 
-<h2>Sign up</h2>
+        <a href="<%= root_path%>" class="m-auto" >
+          <%= image_tag("logo/logo-300x200.png", alt: "segura and company logo", class:"", id: "top-logo"
+        )%>
+          <%# image_tag("logo/logo-300x200.png", alt: "segura and company logo", class:"", id: "top-logo-mobile"
+        )%>
+
+        </a>    
+      </div> 
+<h2 class="mt-4">Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -71,18 +80,20 @@
         </div>
       </div>
     </div>
-    <div class="field bg-info p-4">
+
+    <div class="field p-4 bg-tory-blue">
       <%= f.check_box :remember_me %>
-      <%= f.label :remember_me, :checked => true %>
+      <%= f.label :remember_me, :checked => true,style:"color: gainsboro;" %>
     </div>
-    <div class="field bg-info p-4">
+    <div class="field bg-tory-blue p-4">
       <%= f.check_box :email_consent, required: true, checked: 'true', class:'m-auto' %>
-      <%= f.label :I_consent_to_receive_email_messages %>
+      <%= f.label :I_consent_to_receive_email_messages,style:"color: gainsboro;" %>
     </div>
 
 
     <div class="actions mt-3">
-      <%= f.submit "Sign up" %>
+      <%= f.submit "Sign up",style:"color: gainsboro;
+  font-size: x-large;" %>
     </div>
   <% end %>
 

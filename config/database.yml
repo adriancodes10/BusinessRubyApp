@@ -17,15 +17,16 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
   encoding: unicode
-  database: wallstreetconstruction_development 
-  username: <%= ENV['POSTGRES_USERNAME'] %>
+  database: <%= ENV['POSTGRES_DB'] %>
+  username: <%= ENV['POSTGRES_USER'] %>
   password: <%= ENV['POSTGRES_PASSWORD'] %>
 
 development:
   <<: *default
-  database: wallstreetconstruction_development
+  database: dev_db
   host: localhost
   port: 5432
+  database: <%= ENV['POSTGRES_DB'] %>
   # scoket: /tmp/.S.pgsql.3300
   # pool: 5
   # username: wallstreetconstruction
@@ -36,11 +37,12 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: wallstreetconstruction_test
+  database: <%= ENV['POSTGRES_TEST_DB'] %>
 
 production:
   <<: *default
-  database: wallstreetconstruction_production
-  # username: wallstreetconstruction
-  # password: 'hjk'
+  database: <%= ENV['POSTGRES_DB'] %>
+  username: seguraconstruction
+  password: <%= ENV['SEGURACONSTRUCTION_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
   # password not used here set in default 

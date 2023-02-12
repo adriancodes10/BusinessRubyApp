@@ -29,10 +29,11 @@
   border-radius: 4rem;
   background-color:
   //  #4580e9
-    #5680e9 // #84ceeb
+    #88141a // #84ceeb
     // #5ab9ea
     //  #c1c8e4
 ;
+  color: gainsboro;
   padding: 3rem;
   // height: 90vh;
   // max-height: 700px;
@@ -130,7 +131,7 @@
   height: 6em;
   width: 6em;
   border-radius: 50%;
-  background-color: var(--primary);
+  background-color: var(--gray-dark);
   left: 0;
   /* transform: translateX(); */
   top: -45%;

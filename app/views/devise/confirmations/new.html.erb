@@ -1,4 +1,15 @@
-<h2>Resend confirmation instructions</h2>
+  <div class='col-12 row d-flex '>
+
+        <a href="<%= root_path%>" class="m-auto" >
+          <%= image_tag("logo/logo-300x200.png", alt: "segura and company logo", class:"", id: "top-logo"
+        )%>
+          <%# image_tag("logo/logo-300x200.png", alt: "segura and company logo", class:"", id: "top-logo-mobile"
+        )%>
+
+        </a>    
+      </div> 
+
+<h2 class="mt-4">Resend confirmation instructions</h2>
 
 <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -9,7 +20,8 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Resend confirmation instructions" %>
+    <%= f.submit "Resend confirmation instructions",style:"color: gainsboro;
+  font-size: larger;" %>
   </div>
 <% end %>
 

@@ -5,13 +5,21 @@
 <%# 
 HTML CSS JSResult Skip Results Iframe
 EDIT ON %>
+<%# 
+
+'backgrounds/banner-abstract-hexagons-white-gray-1900x600.jpg'
+'backgrounds/bg-abstract-grey-cubes.jpg'
+app/assets/images/backgrounds/banner-abstract-circles-white-gray-1900x600.jpg
+
+ 
+%>
 @import 'https://fonts.googleapis.com/css?family=Raleway';
 
 
 
 @media (max-width: 1600px) {
   .top-cont {
- background-image: url(<%= asset_path 'backgrounds/banner-abstract-hexagons-white-gray-1900x600.jpg' %>);
+ background-image: url(<%= asset_path 'backgrounds/bg-abstract-grey-cubes.jpg' %>);
 
   }
 }
@@ -48,6 +56,8 @@ main {
 .notice{
   background-color:#c8f4ba;
   border: 1px solid #b0d6a3;
+  position: absolute;
+  width: 100vw;
 }
 .notice strong{
   background-color:#bee4b2;
@@ -55,8 +65,6 @@ main {
 }
 .error{
   background:#ff0000;
-  
-
 }
 
 /* Pull up  */

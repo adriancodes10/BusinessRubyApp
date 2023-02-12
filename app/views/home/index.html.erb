@@ -58,17 +58,17 @@
         <div class="" style="margin: auto;">
           <h1 class="top-section-title d-none"></h1>
           <br>
-          <h4 class=" font-weight-bold
+          <h2 class=" font-weight-bold
             text-muted mt-2 " >
             Commercial + Residential 
-          </h4>
+          </h2>
           <br>
-          <h2 class="display text-uppercase
+          <h3 class="display text-uppercase
             text-break font-weight-bolder mt-2">Poured Concrete Foundation Retaining Walls 
-          </h2> 
-          <button class="cta-schedule" >
-            <%= link_to 'Schedule a Project', new_dashboard_url, class:'', style:'font-size: 1rem;color: white;' %>
-          </button>
+          </h3> 
+       
+            <%= link_to 'Schedule a Project', new_dashboard_url, class:'cta-schedule', style:'font-size: 1rem;color: white;' %>
+   
           
         </div>
       </div>
@@ -184,7 +184,7 @@
 
                     <div class="details col-md-6 d-flex flex-column">
                         <h2 class='featurette-heading' style="">Reinforced Concrete Retaining Walls</h2>
-                        <p class="first">
+                        <p class="first slider-text">
                          1-4 weeks completion time 
                          <br/>Poured in one day<br/>
                           Low maintainance <br/>
@@ -207,8 +207,8 @@
                      </div></div>
 
                     <div class="details col-md-6 d-flex flex-column">
-                        <h2>Reinforced For Performance</h2>
-                        <p>
+                        <h2 class="featurette-heading">Reinforced For Performance</h2>
+                        <p class="slider-text">
                           Steel Rebar Reinforcements
                            <br/>
                           ultimate flexural strength greater than block <br/>
@@ -229,8 +229,8 @@
                     </div>
 
                     <div class="details col-md-6 d-flex flex-column">
-                        <h2>Top Engineering</h2>
-                        <p>
+                        <h2 class="featurette-heading">Top Engineering</h2>
+                        <p class="slider-text">
                         20+ years of experience
                         <br/>
                         Safety focused 
@@ -256,8 +256,8 @@
                     </div>
 
                     <div class="details col-md-6 d-flex flex-column">
-                        <h2>Built with pride</h2>
-                        <p>
+                        <h2 class="featurette-heading">Built with pride</h2>
+                        <p class="slider-text">
                             Pride in our Service 
                             <br/>
                             Pride in our work
@@ -377,14 +377,15 @@
        
       </div>
 
-      <div class="container-bs mt-5" >
+    
+        <% if user_signed_in? %> 
+         <div class="container-bs mt-5 mb-5 card px-4" >
         <%# <!- Contact Form  %>
-        <% if user_signed_in? %>
-          <h3>Add a project using this project form </h3>
+          <h5>Add a project using this project form </h5>
           <%= render 'shared/project'%>
       
+         </div> <!-- end of col -->
         <% end %> 
-      </div> <!-- end of col -->
 
     
       <div class="col-12">
