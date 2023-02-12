@@ -8,6 +8,7 @@ services:
   - type: web
     name: seguraconstruction
     env: ruby
+    plan: free # optional (defaults to starter)
     buildCommand: './bin/render-build.sh'
     startCommand: 'bundle exec puma -C config/puma.rb'
     envVars:
